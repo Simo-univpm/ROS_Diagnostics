@@ -1,0 +1,69 @@
+analyzers:
+  sensors: 
+    type: AnalyzerGroup
+    path: Sensors
+    analyzers:
+      odometry:
+        type: AnalyzerGroup
+        path: Odometry
+        analyzers:
+          ekf:
+            type: GenericAnalyzer
+            path: Ekf
+            timeout: 5.0
+            find_and_remove_prefix: odometry_ekf_updater
+            num_items: 13
+          ground_truth:
+            type: GenericAnalyzer
+            path: Ground Truth
+            timeout: 5.0
+            find_and_remove_prefix: odometry_ground_truth_odom_updater
+            num_items: 13
+          diff_drive_controller:
+            type: GenericAnalyzer
+            path: Diff Drive Controller
+            timeout: 5.0
+            find_and_remove_prefix: odometry_updater
+            num_items: 13
+      laser:
+        type: GenericAnalyzer
+        path: Laser
+        timeout: 5.0
+        find_and_remove_prefix: laser_scan_updater
+        num_items: 8
+      camera:
+        type: GenericAnalyzer
+        path: Camera
+        timeout: 5.0
+        find_and_remove_prefix: cam_updater
+        num_items: 1
+      imu:
+        type: GenericAnalyzer
+        path: IMU
+        timeout: 5.0
+        find_and_remove_prefix: imu_updater
+        num_items: 3          
+  actuators:
+    type: AnalyzerGroup
+    path: Actuators
+    analyzers:
+      ekf:
+        type: GenericAnalyzer
+        path: cmd_vel
+        timeout: 5.0
+        find_and_remove_prefix: cmd_vel_updater
+        num_items: 6
+      right_wheel_joint:
+        type: GenericAnalyzer
+        path: Right Wheel Joint
+        timeout: 5.0
+        find_and_remove_prefix: joint_left_wheel
+        num_items: 6
+      left_wheel_joint:
+        type: GenericAnalyzer
+        path: Left Wheel Joint
+        timeout: 5.0
+        find_and_remove_prefix: joint_right_wheel
+        num_items: 6
+
+      

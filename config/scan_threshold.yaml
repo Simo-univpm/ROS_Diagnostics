@@ -1,0 +1,11 @@
+scan_params:
+  scan_thresholds:
+    "angle_min_threshold": -2
+    "angle_max_threshold": 2
+    "angle_increment_threshold": 0.006
+    "time_increment_threshold": 0.1
+    "scan_time_threshold": 0.1
+    "range_min_threshold": 0.2
+    "range_max_threshold": 5
+
+

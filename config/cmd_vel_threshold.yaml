@@ -1,0 +1,9 @@
+cmd_vel_thresholds:
+  linear:
+    "x_threshold": 0.0
+    "y_threshold": 0.0
+    "z_threshold": 0.0
+  angular:
+    "x_threshold": 0.0
+    "y_threshold": 0.0
+    "z_threshold": 0.0

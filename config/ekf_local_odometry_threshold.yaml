@@ -1,0 +1,18 @@
+ekf_params:
+  ekf_pose_position:
+    "x_threshold": 0.0065447960
+    "y_threshold": 0.003
+    "z_threshold": 0.004
+  ekf_pose_orientation:
+    "x_threshold": 0.0065447960
+    "y_threshold": 0.0
+    "z_threshold": -0.1
+    "w_threshold": 0.99998180
+  ekf_twist_linear:
+    "x_threshold": -4.53126257166e-05
+    "y_threshold": 0.0
+    "z_threshold": 0.0
+  ekf_twist_angular:
+    "x_threshold": 0.0
+    "y_threshold": 0.0
+    "z_threshold": -2.2e-07
